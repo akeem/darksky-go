@@ -23,7 +23,7 @@ for a given address
 
 1. Create a DarkSky object
 
-dSky := DarkSky{<API key>}
+  `dSky := DarkSky{<API key>}`
 
 2. With the DarkSky object, you should now be able to make calls against
    the api.
