@@ -7,7 +7,7 @@ import "strconv"
 const API_HOST = "api.darkskyapp.com"
 
 type DarkSky struct {
-  apiKey string
+  ApiKey string
 }
 
 func webRequest(url string) string{
@@ -21,15 +21,15 @@ func webRequest(url string) string{
   return string(body)
 }
 
-func (d DarkSky) hourlyForecast(lat ,long float64) string {
-  return webRequest("https://"+API_HOST+"/v1/forecast/"+d.apiKey+"/"+strconv.FormatFloat(lat,'f',4,32)+","+strconv.FormatFloat(long,'f',4,32)+"")
+func (d DarkSky) HourlyForecast(lat ,long float64) string {
+  return webRequest("https://"+API_HOST+"/v1/forecast/"+d.ApiKey+"/"+strconv.FormatFloat(lat,'f',4,32)+","+strconv.FormatFloat(long,'f',4,32)+"")
 }
 
-func (d DarkSky) briefHourlyForecast(lat ,long float64) string {
-  return webRequest("https://"+API_HOST+"/v1/brief_forecast/"+d.apiKey+"/"+strconv.FormatFloat(lat,'f',4,32)+","+strconv.FormatFloat(long,'f',4,32)+"")
+func (d DarkSky) BriefHourlyForecast(lat ,long float64) string {
+  return webRequest("https://"+API_HOST+"/v1/brief_forecast/"+d.ApiKey+"/"+strconv.FormatFloat(lat,'f',4,32)+","+strconv.FormatFloat(long,'f',4,32)+"")
 }
 
-func (d DarkSky) interestingStorms()string{
-  return webRequest("https://"+API_HOST+"/v1/interesting/"+d.apiKey+"")
+func (d DarkSky) InterestingStorms()string{
+  return webRequest("https://"+API_HOST+"/v1/interesting/"+d.ApiKey+"")
 }
 
