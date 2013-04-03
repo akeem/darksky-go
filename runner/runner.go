@@ -1,7 +1,9 @@
 package main
 
-import "darksky-go/darksky"
-import "fmt"
+import (
+  "fmt"
+  "darksky-go/darksky"
+)
 
 func main() {
 
