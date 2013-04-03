@@ -22,11 +22,13 @@ func webRequest(url string) string{
 }
 
 func (d DarkSky) HourlyForecast(lat ,long float64) string {
-  return webRequest("https://"+API_HOST+"/v1/forecast/"+d.ApiKey+"/"+strconv.FormatFloat(lat,'f',4,32)+","+strconv.FormatFloat(long,'f',4,32)+"")
+  return webRequest("https://"+API_HOST+"/v1/forecast/"+d.ApiKey+"/"+strconv.FormatFloat(lat,'f',4,32)+
+  ","+strconv.FormatFloat(long,'f',4,32)+"")
 }
 
 func (d DarkSky) BriefHourlyForecast(lat ,long float64) string {
-  return webRequest("https://"+API_HOST+"/v1/brief_forecast/"+d.ApiKey+"/"+strconv.FormatFloat(lat,'f',4,32)+","+strconv.FormatFloat(long,'f',4,32)+"")
+  return webRequest("https://"+API_HOST+"/v1/brief_forecast/"+d.ApiKey+"/"+strconv.FormatFloat(lat,'f',4,32)+
+  ","+strconv.FormatFloat(long,'f',4,32)+"")
 }
 
 func (d DarkSky) InterestingStorms()string{
