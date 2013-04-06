@@ -1,8 +1,10 @@
 package darksky
 
-import "net/http"
-import "io/ioutil"
-import "strconv"
+import (
+  "net/http"
+  "io/ioutil"
+  "strconv"
+)
 
 const API_HOST = "api.darkskyapp.com"
 
